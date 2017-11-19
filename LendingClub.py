@@ -2,7 +2,7 @@ import csv
 import sys
 
 
-def read_csv(input_file, output_file):
+def clean_csv_input(input_file, output_file):
     with open(input_file, 'r', encoding='utf-8') as infile, open(output_file, 'w', encoding='utf-8') as outfile:
         reader = csv.reader(infile)
         writer = csv.writer(outfile)
@@ -37,4 +37,4 @@ def calc_label(row):
 if __name__ == '__main__':
     """python3 LendingClub.py <input csv file path> <output cleaned csv file path>"""
     [input_file, output_file] = sys.argv[1:]
-    read_csv(input_file, output_file)
+    clean_csv_input(input_file, output_file)
